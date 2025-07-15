@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .dark-mode {
+            background-color: #1a202c;
+            color: #f7fafc;
+        }
+        .dark-mode .navbar {
+            background-color: #1a202c;
+        }
+        .dark-mode .nav-link {
+            color: #f7fafc;
+        }
+        .dark-mode .card {
+            background-color: #2d3748;
+            border-color: #4a5568;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-gray-50 transition-colors duration-300">
+    <header class="fixed w-full z-50 bg-white shadow-sm">
+        <nav class="navbar container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">
+                    Qinisani<span class="text-gray-800">Portfolio</span>
+                </div>
+                <div class="flex items-center space-x-2 md:space-x-6">
+                    <a href="#home" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#about" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#skills" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">Skills</a>
+                    <a href="#projects" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">Projects</a>
+                    <a href="#contact" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        <i class="fas fa-moon text-gray-700 dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="container mx-auto px-6 py-24 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-800 dark:text-white">
+                    Hi, I'm <span class="text-blue-600">Qinisani Mhlanga</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl mb-6 text-gray-600 dark:text-gray-300">
+                    Software Developer
+                </h2>
+                <p class="text-lg mb-8 text-gray-600 dark:text-gray-300">
+                    I build exceptional digital experiences with clean, efficient code and modern technologies.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="mt-8 flex space-x-4">
+                    <a href="https://github.com/username" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/username" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://twitter.com/username" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com/username" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-float">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <img src="Qinisani.jpg" alt="Portrait of software developer Alex wearing glasses and smiling, with a modern office background" class="rounded-full border-8 border-white dark:border-gray-700 shadow-xl">
+                    <div class="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
+                    About <span class="text-blue-600">Me</span>
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="grid md:grid-cols-3 gap-8 items-center">
+                        <div class="md:col-span-2">
+                            <p class="text-lg mb-4 text-gray-600 dark:text-gray-300">
+                                I'm a passionate full-stack developer with 5+ years of experience building web applications. 
+                                I specialize in JavaScript frameworks and have a strong background in both frontend and 
+                                backend technologies.
+                            </p>
+                            <p class="text-lg mb-6 text-gray-600 dark:text-gray-300">
+                                My journey in software development began when I built my first website at 16. Since then, 
+                                I've worked with startups and Fortune 500 companies to deliver high-quality, 
+                                user-friendly applications.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
+                                    JavaScript Expert
+                                </span>
+                                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
+                                    Problem Solver
+                                </span>
+                                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">
+                                    Team Player
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="desk.jpeg" alt="Developer coding setup with multiple monitors and ergonomic workspace" class="rounded-lg shadow-xl w-full max-w-xs border-4 border-white dark:border-gray-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+                    My <span class="text-blue-600">Skills</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card p-8 rounded-xl bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Frontend</h3>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>HTML5 & CSS3
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>JavaScript 
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>Dart
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>Flutter
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card p-8 rounded-xl bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Backend</h3>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>Node.js & Express
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>Python & Django
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>REST & GraphQL APIs
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>SQL & NoSQL Databases
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card p-8 rounded-xl bg-white dark:bg-gray-700 shadow-md hover:shadow-lg transition">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Tools</h3>
+                        <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>Git & GitHub
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>Docker & Kubernetes
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>AWS & GCP
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>CI/CD Pipelines
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+                    Featured <span class="text-blue-600">Projects</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card rounded-xl overflow-hidden bg-white dark:bg-gray-700 shadow-md hover:shadow-xl transition duration-300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f2c2cf0e-5178-4a9f-8f29-19aa112a7038.png" alt="Dashboard interface for Task Management App showing tasks, progress charts, and team collaboration features" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black opacity-0 hover:opacity-40 transition duration-300 flex items-center justify-center">
+                                <a href="#" class="text-white text-lg font-bold opacity-0 hover:opacity-100 transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">School Management System </h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                A productivity system used at school to keep track of student and make anouncements, notices etc.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">PHP</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">Javascript</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">SQL</span>
+                            </div>
+                            <div class="mt-4 flex justify-between">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400">Source Code</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card rounded-xl overflow-hidden bg-white dark:bg-gray-700 shadow-md hover:shadow-xl transition duration-300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="aec.png" alt="Mobile banking application interface showing transaction history, balance, and financial analytics" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black opacity-0 hover:opacity-40 transition duration-300 flex items-center justify-center">
+                                <a href="#" class="text-white text-lg font-bold opacity-0 hover:opacity-100 transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Church Mobile App</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Secure financial application with biometric authentication and transaction tracking.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">Flutter</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">Dart</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">Firebase</span>
+                            </div>
+                            <div class="mt-4 flex justify-between">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400">Source Code</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card rounded-xl overflow-hidden bg-white dark:bg-gray-700 shadow-md hover:shadow-xl transition duration-300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="posca.png" alt="AI-powered recommendation engine interface with machine learning visualizations and user preferences" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black opacity-0 hover:opacity-40 transition duration-300 flex items-center justify-center">
+                                <a href="#" class="text-white text-lg font-bold opacity-0 hover:opacity-100 transition">View Details</a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-white">Posca Farms Website</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">
+                                Showcast the company profile and making orders, purchase online.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">HTML</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">CSS</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-md">JavaScript</span>
+                            </div>
+                            <div class="mt-4 flex justify-between">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400">Source Code</a>
+                                <a href="#" class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button id="load-more" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition">
+                        Load More Projects
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-100 dark:bg-gray-800 py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">
+                    Get In <span class="text-blue-600">Touch</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium mb-1 text-gray-800 dark:text-white">Email</h4>
+                                    <a href="mailto:mhlangaqinisani22@gmail.com" class="text-gray-600 hover:text-blue-600 dark:hover:text-blue-400 transition">mhlangaqinisani22@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium mb-1 text-gray-800 dark:text-white">Phone</h4>
+                                    <a href="tel:+26876565534" class="text-gray-600 hover:text-blue-600 dark:hover:text-blue-400 transition">+268 7656 5534</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium mb-1 text-gray-800 dark:text-white">Location</h4>
+                                    <p class="text-gray-600">Zone 6, Mahwalala, Mbabane, Eswatini</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <h4 class="text-lg font-medium mb-4 text-gray-800 dark:text-white">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/username" target="_blank" class="social-icon w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/username" target="_blank" class="social-icon w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://twitter.com/username" target="_blank" class="social-icon w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://instagram.com/username" target="_blank" class="social-icon w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://stackoverflow.com/users/username" target="_blank" class="social-icon w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-600 hover:text-white transition">
+                                    <i class="fab fa-stack-overflow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block mb-2 text-gray-800 dark:text-gray-200">Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 text-gray-800 dark:text-gray-200">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            </div>
+                            <div>
+                                <label for="subject" class="block mb-2 text-gray-800 dark:text-gray-200">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-2 text-gray-800 dark:text-gray-200">Message</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Developer Portfolio. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://github.com/username" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/username" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/username" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com/username" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="mt-4 text-gray-400">Crafted with <i class="fas fa-heart text-red-500"></i> by Qinisani Mhlanga</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or use user's system preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark' || (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark-mode');
+        }
+
+        // Add event listener for theme toggle
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark-mode');
+            const theme = html.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to a server
+            console.log({name, email, subject, message});
+            
+            // Show success message
+            alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Load more projects functionality
+        document.getElementById('load-more').addEventListener('click', function() {
+            // In a real implementation, this would fetch more projects from an API
+            alert('More projects would be loaded here in a real implementation.');
+        });
+    </script>
+</body>
+</html>
